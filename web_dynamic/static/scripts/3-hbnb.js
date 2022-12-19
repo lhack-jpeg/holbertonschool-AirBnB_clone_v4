@@ -36,7 +36,7 @@ $.ajax({
     contentType: "application/json",
     data: JSON.stringify({}),
     success: function (data) {
-        console.log({ data });
+        console.log(`This is the sucessful return of data: ${data}`);
         $.each(data, function () {
             $(`<article>
 <div class="title">
