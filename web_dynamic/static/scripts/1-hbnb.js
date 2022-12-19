@@ -13,7 +13,7 @@ $(function () {
     $("input[type=checkbox]").click(() => {
         const selectedAmenity = checkDataDict();
         selectedAmenity.forEach((element) => {
-            $(".amenity h4").text(element);
+            $(".amenities h4").text(element);
         });
     });
 });
