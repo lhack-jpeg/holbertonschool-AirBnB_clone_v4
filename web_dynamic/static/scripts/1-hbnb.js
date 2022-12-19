@@ -1,6 +1,9 @@
-const data_dict = {};
 const checkDataDict = () => {
+    const amenityList = [];
     let checkedInput = $("input:checked");
+    for (const item in object) {
+        console.log(item["data-name"]);
+    }
     console.log({ checkedInput });
 };
 $(function () {
