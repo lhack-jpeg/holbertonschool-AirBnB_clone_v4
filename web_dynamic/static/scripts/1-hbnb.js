@@ -12,6 +12,8 @@ checkDataDict();
 $(function () {
     $("input[type=checkbox]").click(() => {
         const selectedAmenity = checkDataDict();
-        $(".amenities h4").text(selectedAmenity.join(", "));
+        selectedAmenity.forEach((element) => {
+            $(`<span>${element}</span>`).appendTo($(".amenities h4"));
+        });
     });
 });
