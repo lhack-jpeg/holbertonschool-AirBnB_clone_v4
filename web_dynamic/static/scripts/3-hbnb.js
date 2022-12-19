@@ -38,7 +38,7 @@ $.ajax({
     success: function (data) {
         console.log(`This is the sucessful return of data: ${data}`);
         console.log({ data });
-        data.forEach(obj, function () {
+        data.forEach(data, function () {
             $(`<article>
 <div class="title">
 <h2>${data.name}</h2>
