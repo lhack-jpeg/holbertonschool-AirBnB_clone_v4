@@ -1,4 +1,4 @@
-amenityList = [];
+let amenityList = [];
 const checkDataDict = () => {
     let checkedInput = $("input:checked");
     for (const item of checkedInput) {
