@@ -36,10 +36,8 @@ $.ajax({
     contentType: "application/json",
     data: JSON.stringify({}),
     success: function (data) {
-        console.log(`This is the sucessful return of data: ${data.data}`);
         console.log({ data });
-        const placeArray = data["data"];
-        placeArray.forEach(data, function () {
+        data.forEach(data, function () {
             $(`<article>
 <div class="title">
 <h2>${data.name}</h2>
