@@ -38,10 +38,10 @@ $.ajax({
     success: function (data) {
         console.log(`This is the sucessful return of data: ${data}`);
         console.log({ data });
-        data.each(obj, function () {
+        data.each(data, function () {
             $(`<article>
 <div class="title">
-<h2>${obj.name}</h2>
+<h2>${data.name}</h2>
 <div class="price_by_night">
 </div>
 </div>
@@ -49,27 +49,27 @@ $.ajax({
 <div class="max_guest">
 <i class="fa fa-users fa-3x" aria-hidden="true"></i>
 <br />
-${obj.max_guest} Guests
+${data.max_guest} Guests
 </div>
 <div class="number_rooms">
 <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
 <br />
-${obj.number_rooms} Bedrooms
+${data.number_rooms} Bedrooms
 </div>
 <div class="number_bathrooms">
 <i class="fa fa-bath fa-3x" aria-hidden="true"></i>
 <br />
-${obj.number_bathrooms} Bathroom
+${data.number_bathrooms} Bathroom
 </div>
 </div>
 <div class="user">
 <strong>Owner: PLACEHOLDER</strong>
 </div>
 <div class="description">
-${obj.description}
+${data.description}
 </div>
 </article>`).appendTo(".places");
         });
-        console.log({ obj });
+        console.log({ data });
     },
 });
