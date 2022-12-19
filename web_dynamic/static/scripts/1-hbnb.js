@@ -11,7 +11,6 @@ checkDataDict();
 $(function () {
     $("input[type=checkbox]").click(() => {
         const selectedAmenity = checkDataDict();
-        console.log(selectedAmenity.length);
         if (selectedAmenity.length > 0) {
             $(".amenities h4").text(selectedAmenity.join(", "));
         } else {
