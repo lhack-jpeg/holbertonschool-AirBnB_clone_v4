@@ -17,7 +17,10 @@ $(function () {
             $(".amenities h4").html("&nbsp;");
         }
     });
-    $.get("http://0.0.0.0:5001/api/v1/status/", (data) => {
-        console.log({ data });
-    });
+    $.get(
+        "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/status/",
+        (data) => {
+            console.log({ data });
+        }
+    );
 });
