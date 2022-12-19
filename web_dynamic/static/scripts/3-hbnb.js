@@ -36,6 +36,7 @@ $.ajax({
     contentType: "application/json",
     data: JSON.stringify({}),
     success: function (data) {
+        console.log({ data });
         $.each(data, function () {
             $(`<article>
 <div class="title">
@@ -67,7 +68,6 @@ ${data.number_bathrooms} Bathroom
 ${data.description}
 </div>
 </article>`).appendTo(".places");
-            console.log({ data });
         });
     },
 });
