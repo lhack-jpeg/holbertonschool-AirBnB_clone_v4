@@ -18,7 +18,7 @@ $(function () {
         }
     });
     $.get(
-        "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/status/",
+        "http://0.0.0.0:5001/api/v1/status/",
         (data) => {
             if (data.status === "OK") {
                 $("#api_status").addClass("available");
@@ -70,4 +70,3 @@ ${v.description}
       });
     }
   });
-});
