@@ -61,9 +61,7 @@ $.ajax({
     ${element.number_bathrooms} Bathroom
     </div>
     </div>
-    <div class="user">
-    <strong>Owner: PLACEHOLDER</strong>
-    </div>
+
     <div class="description">
     ${element.description}
     </div>
