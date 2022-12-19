@@ -3,7 +3,7 @@ const checkDataDict = () => {
     let checkedInput = $("input:checked");
     let checkInputLength = checkedInput.length;
     for (const item of checkedInput) {
-        console.log(item["data-id"]);
+        console.log({ item });
     }
 
     console.log({ checkedInput });
