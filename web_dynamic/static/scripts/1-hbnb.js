@@ -1,5 +1,5 @@
+amenityList = [];
 const checkDataDict = () => {
-    const amenityList = [];
     let checkedInput = $("input:checked");
     let checkInputLength = checkedInput.length;
     for (const item of checkedInput) {
@@ -11,8 +11,8 @@ const checkDataDict = () => {
 };
 
 checkDataDict();
+console.log({ amenity_list });
 $(function () {
-    console.log("Page loaded");
     $("input[type=checkbox]").click(checkDataDict());
 });
 
