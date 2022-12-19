@@ -61,6 +61,7 @@ button:hover {
 
 .amenities h4 {
     white-space: nowrap;
+    overflow-x: hidden;
 }
 
 .popover {
