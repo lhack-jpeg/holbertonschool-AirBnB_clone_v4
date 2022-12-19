@@ -20,7 +20,11 @@ $(function () {
     $.get(
         "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/status/",
         (data) => {
-            console.log(data.status);
+            if (data.status === "OK") {
+                $("#api_status").addClass("available");
+            } else {
+                $("#api_status").removeClass("available");
+            }
         }
     );
 });
