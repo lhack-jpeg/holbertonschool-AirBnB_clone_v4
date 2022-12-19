@@ -1,14 +1,19 @@
-let amenityList = [];
 const checkDataDict = () => {
+    const amenityList = [];
     let checkedInput = $("input:checked");
     for (const item of checkedInput) {
         console.log(item.dataset.name);
         amenityList.push(item.dataset.name);
     }
-    console.log(amenityList);
+    return amenityList;
 };
 
 checkDataDict();
 $(function () {
-    $("input[type=checkbox]").click(checkDataDict);
+    $("input[type=checkbox]").click(() => {
+        const selectedAmenity = checkDataDict();
+        selectedAmenity.forEach((element) => {
+            $(".amenity h4").text(element);
+        });
+    });
 });
