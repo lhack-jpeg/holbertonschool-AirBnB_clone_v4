@@ -11,7 +11,7 @@ const checkDataDict = () => {
 };
 
 checkDataDict();
-console.log({ amenity_list });
+console.log({ amenityList });
 $(function () {
     $("input[type=checkbox]").click(checkDataDict);
 });
