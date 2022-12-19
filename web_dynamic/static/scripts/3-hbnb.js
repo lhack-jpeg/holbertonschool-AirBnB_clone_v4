@@ -37,38 +37,37 @@ $.ajax({
     data: JSON.stringify({}),
     success: function (data) {
         console.log({ data });
-        data.forEach(data, function () {
+        data.forEach((element) => {
             $(`<article>
-<div class="title">
-<h2>${data.name}</h2>
-<div class="price_by_night">
-</div>
-</div>
-<div class="information">
-<div class="max_guest">
-<i class="fa fa-users fa-3x" aria-hidden="true"></i>
-<br />
-${data.max_guest} Guests
-</div>
-<div class="number_rooms">
-<i class="fa fa-bed fa-3x" aria-hidden="true"></i>
-<br />
-${data.number_rooms} Bedrooms
-</div>
-<div class="number_bathrooms">
-<i class="fa fa-bath fa-3x" aria-hidden="true"></i>
-<br />
-${data.number_bathrooms} Bathroom
-</div>
-</div>
-<div class="user">
-<strong>Owner: PLACEHOLDER</strong>
-</div>
-<div class="description">
-${data.description}
-</div>
-</article>`).appendTo(".places");
+    <div class="title">
+    <h2>${element.name}</h2>
+    <div class="price_by_night">
+    </div>
+    </div>
+    <div class="information">
+    <div class="max_guest">
+    <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+    <br />
+    ${element.max_guest} Guests
+    </div>
+    <div class="number_rooms">
+    <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
+    <br />
+    ${element.number_rooms} Bedrooms
+    </div>
+    <div class="number_bathrooms">
+    <i class="fa fa-bath fa-3x" aria-hidden="true"></i>
+    <br />
+    ${element.number_bathrooms} Bathroom
+    </div>
+    </div>
+    <div class="user">
+    <strong>Owner: PLACEHOLDER</strong>
+    </div>
+    <div class="description">
+    ${element.description}
+    </div>
+    </article>`).appendTo(".places");
         });
-        console.log({ data });
     },
 });
