@@ -52,7 +52,7 @@ ${data.max_guest} Guests
 <div class="number_rooms">
 <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
 <br />
-${v.number_rooms} Bedrooms
+${data.number_rooms} Bedrooms
 </div>
 <div class="number_bathrooms">
 <i class="fa fa-bath fa-3x" aria-hidden="true"></i>
@@ -67,6 +67,7 @@ ${data.number_bathrooms} Bathroom
 ${data.description}
 </div>
 </article>`).appendTo(".places");
+            console.log({ data });
         });
     },
 });
