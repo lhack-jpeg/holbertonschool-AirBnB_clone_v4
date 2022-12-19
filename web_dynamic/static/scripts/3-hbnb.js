@@ -36,10 +36,10 @@ $.ajax({
     contentType: "application/json",
     data: JSON.stringify({}),
     success: function (data) {
-        $.each(data, function (key, value) {
+        $.each(data, function () {
             $(`<article>
 <div class="title">
-<h2>${v.name}</h2>
+<h2>${data.name}</h2>
 <div class="price_by_night">
 </div>
 </div>
@@ -47,7 +47,7 @@ $.ajax({
 <div class="max_guest">
 <i class="fa fa-users fa-3x" aria-hidden="true"></i>
 <br />
-${v.max_guest} Guests
+${data.max_guest} Guests
 </div>
 <div class="number_rooms">
 <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
@@ -57,14 +57,14 @@ ${v.number_rooms} Bedrooms
 <div class="number_bathrooms">
 <i class="fa fa-bath fa-3x" aria-hidden="true"></i>
 <br />
-${v.number_bathrooms} Bathroom
+${data.number_bathrooms} Bathroom
 </div>
 </div>
 <div class="user">
 <strong>Owner: PLACEHOLDER</strong>
 </div>
 <div class="description">
-${v.description}
+${data.description}
 </div>
 </article>`).appendTo(".places");
         });
