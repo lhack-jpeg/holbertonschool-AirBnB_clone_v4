@@ -4,6 +4,7 @@ const checkDataDict = () => {
     console.log({ checkedInput });
 };
 $(function () {
+    console.log("Page loaded");
     $("input[type=checkbox]").click(checkDataDict());
 });
 
