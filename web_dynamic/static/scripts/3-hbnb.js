@@ -18,7 +18,7 @@ $(function () {
         }
     });
     $.get(
-        "http://0.0.0.0:5001/api/v1/status/",
+        "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/status/",
         (data) => {
             if (data.status === "OK") {
                 $("#api_status").addClass("available");
@@ -30,14 +30,14 @@ $(function () {
 });
 
 $.ajax({
-    url: 'http://0.0.0.0:5001/api/v1/places_search/',
-    type: 'POST',
-    dataType: 'json',
-    contentType: 'application/json',
+    url: "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/places_search/",
+    type: "POST",
+    dataType: "json",
+    contentType: "application/json",
     data: JSON.stringify({}),
     success: function (data) {
-      $.each(data, function (key, value) {
-        $(`<article>
+        $.each(data, function (key, value) {
+            $(`<article>
 <div class="title">
 <h2>${v.name}</h2>
 <div class="price_by_night">
@@ -66,7 +66,7 @@ ${v.number_bathrooms} Bathroom
 <div class="description">
 ${v.description}
 </div>
-</article>`).appendTo('.places');
-      });
-    }
-  });
+</article>`).appendTo(".places");
+        });
+    },
+});
