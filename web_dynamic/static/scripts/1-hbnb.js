@@ -1,7 +1,7 @@
 const checkDataDict = () => {
     const amenityList = [];
     let checkedInput = $("input:checked");
-    for (const item in checkedInput) {
+    for (const item of checkedInput) {
         console.log({ item });
     }
     console.log({ checkedInput });
