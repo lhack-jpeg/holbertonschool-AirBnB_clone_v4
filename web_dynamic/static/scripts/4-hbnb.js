@@ -32,10 +32,10 @@ $(function () {
         $.ajax({
             type: "POST",
             url: "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/places_search/",
-            data: JSON.stringify({ amenities: selectedAmenity }),
+            data: JSON.stringify({}),
+            amenities: selectedAmenity,
             contentType: "application/json",
             success: function (response) {
-                console.log({ data });
                 console.log({ response });
                 $("section.places").empty();
                 for (const place of response) {
@@ -70,7 +70,6 @@ $.ajax({
     contentType: "application/json",
     data: JSON.stringify({}),
     success: function (data) {
-        console.log({ data });
         data.forEach((element) => {
             $(`<article>
     <div class="title">
