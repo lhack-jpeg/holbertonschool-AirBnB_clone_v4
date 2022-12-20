@@ -33,12 +33,12 @@ $(function () {
             "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/places_search/",
             {
                 data: JSON.stringify({}),
-                contentType: "application/json"
+                contentType: "application/json",
             },
-            function (response) {
-                console.log({ response });
+            function (data) {
+                console.log({ data });
                 $("section.places").empty();
-                for (const place of response) {
+                for (const place of data) {
                     $(`<article>
                 <div class="title_box">
                 <h2>${place.name}</h2>
