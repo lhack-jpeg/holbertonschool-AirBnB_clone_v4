@@ -35,6 +35,8 @@ $(function () {
             data: JSON.stringify({ amenities: selectedAmenity }),
             contentType: "application/json",
             success: function (response) {
+                console.log({ data });
+                console.log({ response });
                 $("section.places").empty();
                 for (const place of response) {
                     $(`<article>
