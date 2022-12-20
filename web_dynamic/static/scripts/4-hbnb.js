@@ -28,11 +28,11 @@ $(function () {
         }
     );
     $("button").click(function () {
-        console.log(Object.keys(dictResults));
+        const selectedAmenity = checkDataDict();
         $.ajax({
             type: "POST",
             url: "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/places_search/",
-            data: JSON.stringify({ amenities: Object.values(dictResults) }),
+            data: JSON.stringify({ amenities: selectedAmenity }),
             contentType: "application/json",
             success: function (response) {
                 $("section.places").empty();
