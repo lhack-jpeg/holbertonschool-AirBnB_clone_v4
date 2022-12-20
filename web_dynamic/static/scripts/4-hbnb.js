@@ -33,7 +33,8 @@ $(function () {
             type: "POST",
             url: "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/places_search/",
             dataType: "json",
-            data: JSON.stringify({ amenities: amenityList }),
+            amenities: amenityList,
+            data: JSON.stringify({ amenities }),
             contentType: "application/json, charset=utf-8",
             success: function (response, body, status) {
                 console.log({ response, body, status });
