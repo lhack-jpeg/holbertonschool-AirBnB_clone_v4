@@ -28,11 +28,10 @@ $(function () {
         }
     );
     $("button").click(function () {
-        const selectedAmenity = checkDataDict();
         $.post(
             "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/places_search/",
             {
-                data: JSON.stringify({ amenities: selectedAmenity }),
+                data: JSON.stringify({}),
                 dataType: "json",
                 contentType: "application/json",
             },
