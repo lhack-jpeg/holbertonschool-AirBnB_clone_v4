@@ -29,16 +29,16 @@ $(function () {
     );
     $("button").click(function () {
         amenityList = checkDataDict();
+        dataobj = {};
+        dataobj.amenities = amenityList;
         $.ajax({
             type: "POST",
             url: "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/places_search/",
             dataType: "json",
-            amenities: amenityList,
-            data: JSON.stringify({ amenities }),
-            contentType: "application/json, charset=utf-8",
-            success: function (response, body, status) {
-                console.log({ response, body, status });
-            },
+            data: JSON.stringify(dataobj),
+            headers: { "Content-Type": "application/json" },
+        }).done(function (data) {
+            console.log({ data });
         });
     });
 });
