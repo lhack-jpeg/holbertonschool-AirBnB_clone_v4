@@ -33,7 +33,6 @@ $(function () {
             "http://f27b91ad72f7.cd567695.hbtn-cod.io:5001/api/v1/places_search/",
             {
                 data: JSON.stringify({}),
-                dataType: "json",
                 amenities: selectedAmenity,
                 contentType: "application/json",
             },
